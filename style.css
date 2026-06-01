@@ -221,6 +221,14 @@
             border-radius: 20px;
             font-size: clamp(1rem, 2.3vh, 2.7rem);
         }
+        #abt-h4{
+            background-color: #f4f2fa;
+            color: #5f51e0;
+            padding: 0.5rem 1rem;
+            width: fit-content;
+            border-radius: 20px;
+            font-size: clamp(1rem, 2.3vh, 2.7rem);
+        }
         .abt-para{
             font-size: clamp(1.1rem, 1.9vh, 2.3rem);
             opacity: 0.9;
@@ -251,4 +259,72 @@
             color: #ffffff;
             border: none;
             font-weight: bold;
+        }
+
+        #services{
+            padding: 5rem;
+            min-height: 100vh;
+            background-color: #f4f5f8;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        #serv-h3 {
+            font-size: clamp(2.8rem, 3.7vh, 4.6rem);
+        }
+        #serv-h4{
+            background-color: #e9e8f3;
+            color: #5f51e0;
+            width: fit-content;
+            margin: auto;
+            border-radius: 20px;
+            font-size: clamp(1rem, 2.3vh, 2.7rem);
+            padding: 0.5rem 1rem;
+        }
+
+        #grid{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, auto);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+         .grid-card {
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            text-align: left;
+            gap: 1rem;
+            transition: background-color 0.3s;
+        }
+         .grid-card h4{
+            font-size: clamp(1.4rem, 1.9vh, 2.5rem);
+            font-weight: bold;
+        }
+         .grid-card p{
+            font-size: clamp(1.1rem, 1.9vh, 2.3rem);
+            opacity: 0.9;
+        }
+        #grid-btn{
+            border-radius: 50px;
+            background-color: #ffffff;
+            color: black;
+            border: none;
+            font-weight: bold;
+            font-size: clamp(1rem, 2.3vh, 2.7rem);
+            transition: background-color 0.3s;
+        }
+        .grid-card:hover{
+            background-color: #5f51e0;
+        }
+        .grid-card:hover #grid-btn{
+            background-color: #5f51e0;
+        }
+        .grid-card:hover .bi{
+            color: #ffffff;
         }
