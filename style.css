@@ -60,6 +60,11 @@
             color: #007bff;
         }
 
+        a{
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
         #hero {
             min-height: 100vh;
             background: linear-gradient(135deg, #411cba 0%, #675ef5 100%);
@@ -95,12 +100,18 @@
 
         .btn-m{
             border-radius: 50px;
-            padding: 15px;
-            margin-right: 350px;
+            padding: 20px 15px;
+            width: fit-content;
             background-color: #ffffff;
             color: #5f51e0;
             border: none;
             font-weight: bold;
+        }
+        .hero-arrow{
+            background-color: #edebf9;
+            border-radius: 50%;
+            padding: 3px;
+            box-shadow: 0px 1px 3px #5f51e0;
         }
 
         .img-h {
@@ -162,7 +173,7 @@
         }
 
         #about {
-            min-height: 100vh;
+            min-height: auto;
             background-color: #ffffff;
             margin: 5rem;
         }
@@ -192,7 +203,6 @@
             width: 70%;
             bottom: -15%;
             right: -35%;
-            opacity: 0.9;
         }
         #sub-img-right span{
             position: absolute;
@@ -247,10 +257,36 @@
             padding: 1.5rem;
         }
 
-        .bi{
+        .about-card .bi{
             font-size: clamp(1.7rem, 2.3vh, 3.2rem);
             color: #5f51e0;
+            background-color: #eae9f3;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
         }
+
+        .about-card:hover .bi{
+            transform: scaleX(-1);
+        }
+
+        .grid-card .bi{
+            font-size: clamp(1.7rem, 2.3vh, 3.2rem);
+            color: #5f51e0;
+            background-color: #eae9f3;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            transition: transform 0.3s ease;
+        }
+
 
         #about-us-btn{
             border-radius: 50px;
@@ -263,7 +299,7 @@
 
         #services{
             padding: 8rem 10rem;
-            min-height: 100vh;
+            min-height: auto;
             background-color: #f4f5f8;
             display: flex;
             flex-direction: column;
@@ -330,7 +366,7 @@
             color: #ffffff;
         }
         .grid-card:hover .bi{
-            color: #ffffff;
+            transform: scaleX(-1);
         }
         #grid-btn:hover{
             cursor: pointer;
@@ -338,7 +374,7 @@
 
         #case-studies{
             padding: 6rem;
-            min-height: 100vh;
+            min-height: auto;
             background-color: #ffffff;
             display: flex;
             flex-direction: column;
@@ -357,6 +393,36 @@
         .case-card{
             position: relative;
         }
+        .case-card button{
+            position: relative;
+            padding: 15px 35px;
+            font-size: 1rem;
+            font-weight: bold;
+            color: #5f51e0; /* Your primary brand color */
+            background-color: transparent; /* Keep the initial background clean */
+            border: 2px solid #5f51e0;
+            border-radius: 50px;
+            cursor: pointer;
+            z-index: 1;
+            outline: none;
+
+            /* 1. Set up a flat color gradient */
+            background-image: linear-gradient(#5f51e0, #5f51e0);
+            /* 2. Position it exactly dead-center */
+            background-position: center;
+            /* 3. Start its width at 0% and height at 100% */
+            background-size: 0% 100%;
+            /* 4. Stop it from repeating across the button */
+            background-repeat: no-repeat;
+            
+            /* Smoothly animate the background-size property */
+            transition: background-size 0.4s ease, color 0.4s ease;
+        }
+        .case-card:hover button{
+            color: #ffffff; /* Flip text to white as background fills */
+            background-size: 100% 100%; /* Expand width smoothly to 100% */
+            cursor: pointer;
+        } 
         .case-card img{
             width: 100%;
             border-radius: 5px;
@@ -375,6 +441,22 @@
             border: none;
             font-weight: 500;
             font-size: clamp(1.4rem, 2.3vh, 3rem);
+        }
+
+        #tst-right .owl-prev{
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            top: 30%;
+            right: -12%;
+        }
+
+        #tst-right .owl-next{
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            top: 30%;
+            right: -18%;
         }
 
         #testimonials{
@@ -415,13 +497,34 @@
             padding-right: 4rem;
         }
         #tst-btn{
-            border-radius: 50px;
-            padding: 15px;
-            background-color: #ffffff;
-            color: #5f51e0;
-            border: none;
+            position: relative;
+            padding: 15px 35px;
+            font-size: 1rem;
             font-weight: bold;
-            font-size: clamp(1rem, 1.5vh, 2.1rem);
+            color: #5f51e0; 
+            background-color: #ffffff;
+            border: 2px solid #5f51e0;
+            border-radius: 50px;
+            cursor: pointer;
+            z-index: 1;
+            outline: none;
+
+            /* 1. Set up a flat color gradient */
+            background-image: linear-gradient(#5f51e0, #5f51e0);
+            /* 2. Position it exactly dead-center */
+            background-position: center;
+            /* 3. Start its width at 0% and height at 100% */
+            background-size: 0% 100%;
+            /* 4. Stop it from repeating across the button */
+            background-repeat: no-repeat;
+            
+            /* Smoothly animate the background-size property */
+            transition: background-size 0.4s ease, color 0.4s ease;
+        }
+
+        #tst-btn:hover {
+            color: #ffffff; /* Flip text to white as background fills */
+            background-size: 100% 100%; /* Expand width smoothly to 100% */
         }
         #tst-right{
             width: 65%;
@@ -439,13 +542,37 @@
             flex-direction: column;
             align-items: flex-start;
             text-align: left;
-            gap: 1rem;
+            gap: 2rem;
             height: 100%;
             min-height: 250px;
         }
         .tst-card i{
             font-size: clamp(1.1rem, 1.9vh, 2.3rem);
             color: #5f51e0;
+        }
+        .tst-card p{
+            font-size: clamp(1.4rem, 2.3vh, 2.9rem);;
+        }
+
+        .tst-card-pic{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .pfp{
+            width: 100px !important;
+            height: 100px !important;
+            min-width: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .quotes{
+            width: 50px !important;
+            height: 50px !important;
+            min-width: 30px;
+            border-radius: 50%;
+            object-fit: cover;
         }
 
         #pricing{
@@ -545,6 +672,53 @@
             cursor: pointer;
         }
 
+        #case-studies .owl-prev{
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            top: 50%;
+            left: -8%;
+        }
+        .owl-prev span{
+            font-size: 100px;
+        }
+
+        #case-studies .owl-next{
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            top: 50%;
+            right: -8%;
+        }
+        .case-card{
+            position: relative;
+        }
+        .case-icon{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            font-size: 3rem;
+        }
+        .owl-next span{
+            font-size: 100px;
+        }
+
+        #team .owl-prev{
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            top: 50%;
+            left: -8%;
+        }
+
+        #team .owl-next{
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            top: 50%;
+            right: -8%;
+        }
+
         #team{
             padding: 6rem 10rem;
             min-height: 100vh;
@@ -579,19 +753,24 @@
             flex-direction: column;
             text-align: center;
             gap: 20px;
+            
         }
         .team-card img{
             width: 100%;
             height: 400px;
+            background-color: #ffffff;
+            border-radius: 20px;
         }
         #blog{
-            padding: 6rem 10rem;
+            padding: 6rem 10rem 8rem;
             min-height: 100vh;
             background-color: #ffffff;
         }
         #blog-articles{
             display: flex;
             gap: 30px;
+            align-items: center;
+            justify-content: center;
         }
         #blog-header{
             display: flex;
@@ -617,6 +796,7 @@
             display: flex;
             gap: 10px;
             align-items: center;
+            position: relative;
         }
 
         .cont{
@@ -629,12 +809,1379 @@
         }
         .blog-img{
             position: relative;
+            overflow: hidden;
         }
         .blog-img img{
             width: 100%;
             border-radius: 5px;
+            transition: 0.3s;
         }
         .blog-cont{
             position: absolute;
             bottom: -20%;
         }
+        .cont button{
+            background-color: #f4f5f8;
+            border: none;
+            font-size: clamp(1.2rem, 1.8vh, 2.2rem);
+            font-weight: 600;
+            margin-right: auto;
+            background: transparent;
+            transition: 0.3s;
+        }
+        .cont h4{
+            font-size: clamp(1.2rem, 1.7vh, 2.2rem);
+            transition: 0.3s;
+        }
+        .cont p{
+            font-size: clamp(1.1rem, 1.3vh, 1.7rem);
+        }
+        .blog-arrow{
+            position: absolute;
+            top: -150%;
+            right: -7.5%;
+            background-color: black;
+            border-radius: 50%;
+            padding: 15px;
+            color: #ffffff;
+            transition: 0.3s;
+        }
+
+        .blog-div:hover img{
+            transform: scale(1.05);
+        }
+        .blog-div:hover .cont h4, .blog-div:hover .cont button{
+            color: #3511a1;
+        }
+        .blog-div:hover .blog-arrow{
+            background-color: #3511a1;
+        }
+
+        .last-section {    
+    display: flex;
+    flex-wrap: wrap;
+    background: linear-gradient(90deg, #2E0797 0%, #726EFC 100%);    
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+    border-radius: 24px;
+    padding: 3rem 3rem 0 3rem; 
+    position: relative;
+    z-index: 10;
+    margin-bottom: -150px; 
+    margin-top: 100px;
+    box-sizing: border-box;
+    overflow: hidden; /* Elements ko boundary se bahar nikalne se rokega */
+}
+
+.banner-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-bottom: 3rem;
+    flex: 1;
+    min-width: 280px;
+}
+
+.cta-text > h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 3.5rem;
+    padding-bottom: 2rem;
+    color: white;
+    margin: 0;
+}
+
+.cta-form {
+    position: relative;
+    z-index: 1;
+    max-width: 480px;
+    width: 100%;
+}
+
+.cta-form input {
+    padding: 1rem 11rem 1rem 1.5rem; /* Padding balanced for internal button */
+    height: 4rem;
+    width: 100%;
+    border-radius: 3rem;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.subscribeBtn {
+    position: absolute;
+    top: 50%;
+    right: 6px; 
+    transform: translateY(-50%); 
+    z-index: 2;
+}
+
+
+/* Ye css sirf subscribe now ki styling keliye he kiunke mere pas ye kyi jga use horha he isliye css lmbi he */
+
+.contact {
+    background-color: white; 
+    color: #2E0797;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1rem;
+    padding: 0.4rem 0.4rem 0.4rem 1.2rem; 
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    position: relative;
+    border-radius: 3rem;
+    overflow: hidden;  
+    z-index: 1;
+    transition: color 0.4s ease;
+}
+
+/* Creates the secret color layer hidden in the center */
+.contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%; /* Hidden by default */
+    height: 100%;
+    background: linear-gradient(90deg, #2E0797 0%, #726EFC 100%);
+    z-index: -1;  /* Sits underneath the button text */
+    transition: width 0.4s ease-in-out;
+}
+
+/* When you hover, grow the width to 100% and turn text white */
+.contact:hover::before {
+    width: 100%;
+}
+
+/* THis ::before allows us to create a small box inside css withoiut using html */
+
+.contact:hover {
+    color: white;
+}
+
+
+.right-nav .contact>span, .contact.hero-btn>span {
+    background: linear-gradient(90deg, rgb(235, 232, 246) 0%, rgb(240, 239, 253) 100%);
+    height: 36px;
+    width: 36px;
+    display: inline-block;
+    line-height: 36px;
+    text-align: center;
+    border-radius: 50px;
+    font-size: 20px;
+    color: #2E0797;
+    transform: rotate(-45deg);
+    margin-left: 6px;
+    transition: 0.4s ease;
+}
+
+/* yhan tk  */
+
+.subscribeBtn button.contact.subscribe {
+    height: calc(4rem - 12px); 
+    margin: 0 !important; 
+    padding: 0 1.5rem; 
+    white-space: nowrap; 
+    display: inline-flex;
+    align-items: center;
+    border-radius: 3rem;
+    border: none;
+    background-color: #2E0797;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.banner-right {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex: 1;
+    min-width: 280px;
+    position: relative;
+}
+
+.banner-right img {
+    max-height: 320px;
+    width: auto;
+    max-width: 100%;
+    display: block;
+    object-fit: contain;
+}
+
+
+.shape3.sh {
+    position: absolute;
+    right: 35%;
+    top: 20%;
+    z-index: 1;
+    animation: vlbounce 5s linear infinite;
+}
+
+
+@keyframes vlbounce {
+    0% {
+        transform: translateY(-20%);
+    }
+    50% {
+        transform: translateY(20%)
+    }
+    100% {
+        transform: translateY(-20%);
+
+    } 
+
+}
+.site-footer {
+    background-color: #F6F6F9; 
+    width: 100%;
+    padding: 240px 10% 4rem 10%;    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    box-sizing: border-box;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footer-logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+.brand-col p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    margin: 0;
+}
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #2E0797;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #2E0797;
+    color: #fff;
+}
+
+.footer-col h3 {
+    color: #000;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.links-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.links-col ul li a {
+    color: rgba(22, 22, 22, 0.7);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.links-col ul li a:hover {
+    color: #726EFC;
+}
+
+.insta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    max-width: 240px;
+}
+
+.insta-item {
+    aspect-ratio: 1 / 1;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #222;
+}
+
+.insta-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ==========================================================================
+   BOTTOM FOOTER
+   ========================================================================== */
+.bottom-footer {
+    background-color: #F6F6F9;
+    border-top: 1px solid #DDDEE1;
+    width: 100%;
+    padding: 24px 0;
+}
+
+.bottom-footer-container {
+    width: 80%; 
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES (BREAKPOINT BREAKDOWN FOR RESPONSIVENESS)
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+    .site-footer {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .bottom-footer-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 992px) {
+    .site-footer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+    .cta-text > h2 {
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .last-section {
+        width: 92%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 3rem 1.5rem 0 1.5rem;
+        margin-bottom: -180px; /* Shift handle for tablet stacking */
+    }
+    
+    .banner-left {
+        align-items: center;
+        width: 100%;
+        padding-bottom: 2rem;
+    }
+
+    .cta-text > h2 {
+        font-size: 2.2rem;
+        line-height: 2.8rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .banner-right {
+        width: 100%;
+    }
+
+    .banner-right img {
+        max-height: 280px;
+    }
+
+    .site-footer {
+        grid-template-columns: repeat(2, 1fr);
+        padding-top: 240px; 
+    }
+
+    .bottom-footer-container {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .shape3.sh{
+        display:none;
+    }
+}
+
+@media (max-width: 520px) {
+    .site-footer {
+        /* 2 Columns grid strictly for layout management */
+        grid-template-columns: repeat(2, 1fr); 
+        padding-top: 280px; 
+        gap: 2.5rem 1.5rem;
+    }
+
+    /* Brand content aur Instagram content full row lelein (1 col stack) */
+    .footer-col.brand-col,
+    .footer-col.insta-col {
+        grid-column: span 2;
+    }
+
+    /* Dono Links-col ab half width lekar ek hi row mein side-by-side ayenge */
+    .footer-col.links-col {
+        grid-column: span 1;
+    }
+
+    .last-section {
+        margin-bottom: -240px; 
+    }
+
+    /* Transform relative layout for smaller inputs */
+    .cta-form input {
+        padding: 1rem;
+        border-radius: 12px;
+        text-align: center;
+        height: 3.5rem;
+    }
+    
+    .subscribeBtn {
+        position: static;
+        transform: none;
+        margin-top: 12px;
+        width: 100%;
+    }
+    
+    .subscribeBtn button.contact.subscribe {
+        width: 100%;
+        justify-content: center;
+        border-radius: 12px;
+        height: 3.5rem;
+    }
+
+    .insta-grid {
+        max-width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+button {
+    position: relative;
+    padding: 15px 35px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #5f51e0; /* Your primary brand color */
+    background-color: transparent; /* Keep the initial background clean */
+    border: 2px solid #5f51e0;
+    border-radius: 50px;
+    cursor: pointer;
+    z-index: 1;
+    outline: none;
+
+    /* 1. Set up a flat color gradient */
+    background-image: linear-gradient(#5f51e0, #5f51e0);
+    /* 2. Position it exactly dead-center */
+    background-position: center;
+    /* 3. Start its width at 0% and height at 100% */
+    background-size: 0% 100%;
+    /* 4. Stop it from repeating across the button */
+    background-repeat: no-repeat;
+    
+    /* Smoothly animate the background-size property */
+    transition: background-size 0.4s ease, color 0.4s ease;
+}
+
+/* Hover State */
+button:hover {
+    color: #ffffff; /* Flip text to white as background fills */
+    background-size: 100% 100%; /* Expand width smoothly to 100% */
+}
+
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+@media (max-width: 992px) {
+
+    #menu-box{
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    nav{
+        padding: 0;
+    }
+
+    nav ul{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    #hero{
+        flex-direction: column;
+        text-align: center;
+        padding: calc(80px + 4rem) 2rem 4rem 2rem;
+        margin-top: -90px;
+    }
+
+    #hero-txt{
+        width: 100%;
+        align-items: center;
+    }
+
+    .hero-img{
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .img-h{
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+    }
+
+    #hero-txt h1{
+        font-size: clamp(3rem, 8vw, 5rem);
+    }
+
+    .hero-para{
+        padding-right: 0;
+        max-width: 700px;
+    }
+
+    .btn-m{
+        margin-right: 0;
+        width: fit-content;
+    }
+
+    .overlay-card{
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80%;
+    }
+
+    #numbers{
+        justify-content: center;
+    }
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+@media (max-width: 768px) {
+
+    header{
+        position: relative;
+    }
+
+    nav ul{
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    #hero{
+        padding: 3rem 1rem;
+    }
+
+    #hero-txt{
+        gap: 1rem;
+    }
+
+    #hero-txt h1{
+        font-size: clamp(2.5rem, 10vw, 4rem);
+        line-height: 1.1;
+    }
+
+    .hero-para{
+        font-size: 1rem;
+    }
+
+    .btn-m{
+        padding: 15px;
+        width: auto;
+    }
+
+    #numbers{
+        flex-direction: column;
+        gap: 1.5rem;
+        padding-left: 0;
+        align-items: center;
+    }
+
+    .numbers-stat{
+        border-right: none;
+        padding-right: 0;
+    }
+
+    .overlay-card{
+        position: static;
+        transform: none;
+        width: 100%;
+        margin-top: 1rem;
+    }
+
+    .overlay-card div{
+        flex-wrap: wrap;
+    }
+}
+
+/* =========================
+   SMALL PHONES
+========================= */
+@media (max-width: 480px) {
+
+    #menu-box{
+        padding: 0.5rem;
+    }
+
+    .logo img{
+        max-width: 180px;
+        height: auto;
+    }
+
+    .btn{
+        padding: 12px 16px;
+    }
+
+    #hero-txt h4{
+        font-size: 0.8rem;
+    }
+
+    #hero-txt h1{
+        font-size: 2.2rem;
+    }
+
+    .hero-para{
+        font-size: 0.95rem;
+    }
+
+    .overlay-card{
+        padding: 1rem;
+    }
+
+    .overlay-card p,
+    .overlay-card span{
+        font-size: 1rem;
+    }
+}
+
+/* ==========================
+   ABOUT SECTION RESPONSIVE
+========================== */
+
+@media (max-width: 1200px) {
+
+    #about-div{
+        gap: 6rem;
+        padding: 6rem 3rem;
+    }
+
+    #about-cards{
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 992px) {
+
+    #about{
+        margin: 2rem;
+    }
+
+    #about-div{
+        flex-direction: column;
+        gap: 8rem;
+        padding: 4rem 2rem;
+    }
+
+    #about-left,
+    #about-right{
+        width: 100%;
+    }
+
+    #about-right{
+        text-align: center;
+    }
+
+    #abt-content{
+        align-items: center;
+    }
+
+    .abt-para{
+        text-align: center;
+    }
+
+    #about-cards{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .about-card{
+        width: 100%;
+    }
+
+    #sub-img-left img{
+        width: 45%;
+        left: -5%;
+        top: 5%;
+    }
+
+    #sub-img-right img{
+        width: 45%;
+        right: -5%;
+        bottom: -10%;
+    }
+
+    #sub-img-right span{
+        right: 5%;
+        bottom: 5%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    #about{
+        margin: 1rem;
+    }
+
+    #about-div{
+        padding: 3rem 1rem;
+        gap: 6rem;
+    }
+
+    #abt-main-img img{
+        width: 100%;
+    }
+
+    #sub-img-left img{
+        width: 40%;
+        left: 0;
+        top: 0;
+    }
+
+    #sub-img-right img{
+        width: 40%;
+        right: 0;
+        bottom: -8%;
+    }
+
+    #sub-img-right span{
+        right: 8%;
+        font-size: 1rem;
+    }
+
+    #about-right h3{
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+
+    #about-div{
+        gap: 4rem;
+    }
+
+    #sub-img-left img,
+    #sub-img-right img{
+        display: none;
+    }
+
+    #sub-img-right span{
+        display: none;
+    }
+
+    #about-right h3{
+        font-size: 1.8rem;
+    }
+
+    .abt-para{
+        font-size: 1rem;
+    }
+
+    .about-card{
+        padding: 1rem;
+    }
+}
+
+/* ==========================
+   SERVICES RESPONSIVE
+========================== */
+
+@media (max-width: 1200px){
+
+    #services{
+        padding: 6rem 4rem;
+    }
+
+    #grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-card{
+        padding-right: 2rem;
+    }
+}
+
+@media (max-width: 992px){
+
+    #services{
+        padding: 5rem 2rem;
+        min-height: auto;
+    }
+
+    .serv-h3{
+        font-size: 2.3rem;
+    }
+
+    #grid{
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .grid-card{
+        padding-right: 1.5rem;
+    }
+}
+
+@media (max-width: 576px){
+
+    #services{
+        padding: 4rem 1rem;
+    }
+
+    .serv-h3{
+        font-size: 1.8rem;
+    }
+
+    .grid-card{
+        padding: 1.25rem;
+    }
+
+    .grid-card h4{
+        font-size: 1.2rem;
+    }
+
+    .grid-card p{
+        font-size: 1rem;
+    }
+}
+
+
+/* ==========================
+   CASE STUDIES RESPONSIVE
+========================== */
+
+@media (max-width: 1200px){
+
+    #case-studies{
+        padding: 5rem 3rem;
+    }
+}
+
+@media (max-width: 992px){
+
+    #case-studies{
+        padding: 4rem 2rem;
+        min-height: auto;
+        gap: 40px;
+    }
+
+    #case-studies-header h3{
+        font-size: 2.3rem;
+    }
+
+    .case-card button{
+        font-size: 1rem;
+        padding: 15px;
+        width: 85%;
+    }
+}
+
+@media (max-width: 768px){
+
+    #case-studies{
+        padding: 4rem 1rem;
+    }
+
+    .case-card{
+        padding-bottom: 40px;
+    }
+
+    .case-card button{
+        width: 90%;
+        font-size: 0.95rem;
+        padding: 12px;
+        bottom: 0;
+    }
+}
+
+@media (max-width: 576px){
+
+    #case-studies-header h3{
+        font-size: 1.8rem;
+    }
+
+    .case-card button{
+        width: 95%;
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
+
+/* ==========================================
+   TABLETS (1024px and below)
+========================================== */
+@media (max-width: 1024px){
+
+    #testimonials{
+        padding: 5rem 3rem;
+        flex-direction: column;
+        gap: 3rem;
+        text-align: center;
+    }
+
+    #tst-left,
+    #tst-right{
+        width: 100%;
+    }
+
+    #tst-content{
+        align-items: center;
+    }
+
+    .tst-para{
+        padding-right: 0;
+        max-width: 700px;
+    }
+
+    #tst-h3{
+        font-size: 2.5rem;
+        line-height: 1.3;
+    }
+
+    .tst-card{
+        min-height: auto;
+    }
+
+    .tst-card-pic{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    #tst-right .owl-prev,
+    #tst-right .owl-next{
+        display: none !important;
+    }
+
+    #pricing{
+        padding: 5rem 3rem;
+    }
+
+    #pricing-cards{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4rem 2rem;
+    }
+
+    .price-card{
+        width: 340px;
+    }
+}
+
+
+/* ==========================================
+   MOBILE (768px and below)
+========================================== */
+@media (max-width: 768px){
+
+    /* TESTIMONIALS */
+
+    #testimonials{
+        padding: 4rem 1.5rem;
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+    }
+
+    #tst-left,
+    #tst-right{
+        width: 100%;
+    }
+
+    #tst-content{
+        align-items: center;
+    }
+
+    #tst-h3{
+        font-size: 2rem;
+        line-height: 1.3;
+    }
+
+    .tst-para{
+        padding-right: 0;
+    }
+
+    .tst-card{
+        padding: 1.25rem;
+        min-height: auto;
+        gap: 1.25rem;
+        border-radius: 15px;
+    }
+
+    .tst-card p{
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+
+    .tst-card-pic{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .pfp{
+        width: 70px !important;
+        height: 70px !important;
+        min-width: 70px;
+    }
+
+    .quotes{
+        display: none;
+    }
+
+    #tst-btn{
+        width: 100%;
+        max-width: 320px;
+    }
+
+    #tst-right .owl-prev,
+    #tst-right .owl-next{
+        display: none !important;
+    }
+
+
+    /* PRICING */
+
+    #pricing{
+        padding: 4rem 1.5rem;
+        gap: 4rem;
+    }
+
+    #pricing-header h3{
+        font-size: 2rem;
+        line-height: 1.3;
+    }
+
+    #pricing-cards{
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+        width: 100%;
+    }
+
+    .price-card{
+        width: 100%;
+        max-width: 350px;
+    }
+
+    .card-up{
+        width: 85%;
+        padding: 1rem;
+        top: -30px;
+    }
+
+    .card-up h5{
+        font-size: 2rem;
+    }
+
+    .card-up p,
+    .card-up span{
+        font-size: 1rem;
+    }
+
+    .card-down{
+        width: 100%;
+        padding: 6rem 1.25rem 2rem;
+    }
+
+    .card-content{
+        gap: 1.5rem;
+    }
+
+    .card-content li{
+        font-size: 1rem;
+    }
+
+    .price-btn{
+        width: 100%;
+        text-align: center;
+        margin-right: 0;
+    }
+}
+
+
+/* ==========================================
+   SMALL PHONES (480px and below)
+========================================== */
+@media (max-width: 480px){
+
+    #testimonials{
+        padding: 3rem 1rem;
+    }
+
+    #pricing{
+        padding: 3rem 1rem;
+    }
+
+    #tst-h3,
+    #pricing-header h3{
+        font-size: 1.7rem;
+    }
+
+    #tst-h4,
+    .serv-h4{
+        font-size: 0.85rem;
+    }
+
+    .tst-card{
+        padding: 1rem;
+    }
+
+    .tst-card p{
+        font-size: 0.95rem;
+    }
+
+    .card-up h5{
+        font-size: 1.7rem;
+    }
+
+    .card-content li{
+        font-size: 0.95rem;
+    }
+
+    .price-btn{
+        font-size: 0.95rem;
+    }
+}
+
+/* =========================
+   TEAM RESPONSIVE
+========================= */
+
+@media (max-width: 992px){
+
+    #team{
+        padding: 5rem 3rem;
+        gap: 4rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    #team-header{
+        align-items: center;
+        text-align: center;
+    }
+
+    .team-card{
+        text-align: center;
+    }
+
+    .team-card img{
+        height: auto;
+        max-height: 450px;
+        object-fit: cover;
+    }
+
+    #team .owl-prev,
+    #team .owl-next{
+        display: none;
+    }
+}
+
+@media (max-width: 768px){
+
+    #team{
+        padding: 4rem 1.5rem;
+        min-height: auto;
+    }
+
+    .team-card img{
+        max-height: 350px;
+    }
+
+    #team-btn{
+        font-size: 1.1rem;
+    }
+
+    .team-card span{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px){
+
+    .team-card img{
+        max-height: 300px;
+    }
+
+    #team-btn{
+        font-size: 1rem;
+    }
+
+    .team-card span{
+        font-size: 0.9rem;
+    }
+}
+
+
+/* =========================
+   BLOG RESPONSIVE
+========================= */
+
+@media (max-width: 1200px){
+
+    #blog{
+        padding: 5rem 3rem 8rem;
+    }
+
+    #blog-header{
+        padding: 3rem;
+    }
+
+    .blog-arrow{
+        right: -5%;
+    }
+}
+
+@media (max-width: 992px){
+
+    #blog{
+        padding: 5rem 2rem 8rem;
+        min-height: auto;
+    }
+
+    #blog-header{
+        padding: 0;
+        margin-bottom: 4rem;
+    }
+
+    #blog-articles{
+        flex-direction: column;
+        gap: 12rem;
+    }
+
+    .blog-div{
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .blog-img img{
+        width: 100%;
+    }
+
+    .blog-cont{
+        width: 90%;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -15%;
+    }
+
+    .blog-arrow{
+        right: -3%;
+    }
+}
+
+@media (max-width: 768px){
+
+    #blog{
+        padding: 4rem 1rem 6rem;
+    }
+
+    #blog-articles{
+        gap: 10rem;
+    }
+
+    .blog-cont{
+        width: 95%;
+        padding: 1rem;
+    }
+
+    .deets{
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .blog-arrow{
+        position: static;
+        margin-left: auto;
+        padding: 10px;
+    }
+
+    .cont h4{
+        font-size: 1.2rem;
+    }
+
+    .cont p{
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px){
+
+    #blog-header{
+        gap: 0.8rem;
+    }
+
+    #blog-articles{
+        gap: 8rem;
+    }
+
+    .blog-cont{
+        width: 100%;
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        margin-top: -10px;
+    }
+
+    .deets{
+        font-size: 0.85rem;
+    }
+
+    .cont h4{
+        font-size: 1.1rem;
+    }
+
+    .cont p{
+        font-size: 0.9rem;
+    }
+
+    .cont button{
+        font-size: 1rem;
+    }
+}

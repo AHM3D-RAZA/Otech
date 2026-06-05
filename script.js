@@ -1,5 +1,5 @@
 $('.case-carousel').owlCarousel({
-    loop:true,
+    loop:false,
     margin:20,
     nav:true,
     dots:false,
@@ -17,7 +17,7 @@ $('.case-carousel').owlCarousel({
 })
 
 $('.testimonial-carousel').owlCarousel({
-        loop:true,
+        loop:false,
         margin:20,
         nav:true,
         dots:true,
@@ -35,7 +35,7 @@ $('.testimonial-carousel').owlCarousel({
     });
 
 $('.team-carousel').owlCarousel({
-    loop:true,
+    loop:false,
     margin:20,
     nav:true,
     dots:false,
@@ -45,3 +45,4 @@ $('.team-carousel').owlCarousel({
         1200:{ items:4 }
     }
 });
+

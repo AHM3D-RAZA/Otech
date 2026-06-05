@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+<!-- Font awesome ki icons use krny keliye copy below link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style type="text/tailwindcss">
+      @theme {
+        --color-icon: rgb(94, 37, 216);
+      }
+    </style>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            keyframes: {
+              marquee: {
+                '0%': { transform: 'translateX(0%)' },
+                '100%': { transform: 'translateX(-50%)' }
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      .group:hover .group-hover\:filter-purple {
+        filter: invert(27%) sepia(85%) saturate(2106%)
+                translateY(0) hue-rotate(236deg) brightness(87%) contrast(93%);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+        <div id="menu-box">
+            <div class="logo">
+                <img src="images/vl-logo-1.1.webp" alt="">
+            </div>
+            <div class="navbar">
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="./aboutus/about.html">About Us</a></li>
+                        <li><a href="../services/services.html">Services</a></li>
+                        <li><a href="./index.html">Pages</a></li>
+                        <li><a href="./index.html">Case Studies</a></li>
+                        <li><a href="./index.html">Blog</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="get-started-div" class="flex items-center justify-content">
+                <button class="relative overflow-hidden border-2 border-[#5f51e0] text-[#3815a4] font-bold px-6 py-2.5 rounded-full bg-no-repeat bg-center transition-all duration-500 bg-white hover:text-black">
+                    <a href="../contact.html">GET STARTED</a>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="hero">
+            <div id="hero-txt">
+                <h1>About Us</h1>
+                <div>
+                    <a href="../index.html">Home</a> > <a href="./about.html">About Us</a>
+                </div>
+            </div>
+            <div class="hero-img">
+                <img class="img-h" src="images/vl-hero-4.1.webp" alt="">
+            </div>
+        </section>
+
+        <section class="py-16 bg-gray-50">
+      <div
+        class="max-w-6xl mx-auto px-4 flex flex-col lg:flex-row items-center gap-10"
+      >
+        <!-- LEFT SECTION -->
+        <div class="lg:w-1/2 w-full flex justify-center relative">
+          <div
+            class="w-[280px] sm:w-[350px]
+             h-[350px] sm:h-[450px] rounded-t-full overflow-hidden border-8 border-blue-700"
+          >
+            <img
+              src="https://html.vikinglab.agency/otech/assets/img/about/vl-about-1.1.png"
+              class="w-full h-full object-cover"
+            />
+          </div>
+
+          <div
+            class="absolute -bottom-10 right-1/2 translate-x-1/2
+           lg:right-10 lg:translate-x-0
+            w-50 h-50 rounded-full overflow-hidden border-8 border-blue-700"
+          >
+            <img
+              src="https://html.vikinglab.agency/otech/assets/img/about/vl-about-1.2.png"
+              class="w-full h-full object-cover"
+            />
+          </div>
+        </div>
+
+        <!-- RIGHT SECTION -->
+        <div class="lg:w-1/2">
+          <span
+            class="bg-gray-100 text-blue-700 px-4 py-1 rounded-full text-1xl font-medium"
+          >
+            ABOUT US
+          </span>
+          <h2 class="text-3xl lg:text-4xl font-semibold mt-4 leading-snug">
+            Empower Your Business <br />
+            Every Step of the Way
+          </h2>
+
+          <p class="text-gray-700 font-medium leading-normal mt-3">
+            Whether it optimizing IT infrastructure, enhancing cybersecurity, or
+            driving digital transformation, we are committed to helping.
+          </p>
+
+          <div
+            class="mt-6 bg-white p-5 rounded-xl flex gap-4 items-start"
+          >
+            <div
+              class="w-5 h-5 rounded-full bg-purple-600 flex items-center justify-center text-white"
+            >
+              <span>
+                <i class="fa-solid fa-circle-check"></i>
+              </span>
+            </div>
+            <div>
+              <h4 class="font-semibold text-lg">Strategic Planning</h4>
+              <p class="text-gray-600 text-sm mt-1 font-medium">
+                We specialize in delivering tailored IT solutions empower
+                businesses to thrive in the digital era.
+              </p>
+            </div>
+          </div>
+
+          <button
+            class="mt-6 bg-blue-600 text-white px-6 py-3 rounded-full flex items-center gap-2 hover:bg-black transition duration-300 ease-in-out "
+          >
+            LEARN MORE
+            <span>
+              <i class="fa-solid fa-arrow-trend-up"></i>
+            </span>
+          </button>
+        </div>
+      </div>
+        </section>
+        <div
+        class="flex flex-col lg:flex-row gap-6 w-full p-4 lg:p-6 justify-center items-center"
+        >
+        <div class="w-full lg:w-1/3 min-w-0 p-2 lg:p-4">
+            <div class="owl-carousel about-carousel owl-theme">
+            <div class="item bg-gray-50 p-4 md:p-6 rounded-xl">
+                <h4 class="text-xl md:text-2xl font-bold mb-3">Our Mission</h4>
+                <p class="text-sm md:text-base text-gray-600">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
+                ratione aperiam pariatur. Accusamus voluptate eius dignissimos
+                tempore cum dolor sit esse ipsa placeat quia, alias vel ipsum? Ex,
+                commodi quod!Lorem ipsum dolor sit amet consectetur adipisicing
+                elit.
+                </p>
+            </div>
+
+            <div class="item bg-gray-50 p-6">
+                <h4 class="text-xl md:text-2xl font-bold mb-3">Our Vision</h4>
+                <p class="text-sm md:text-base text-gray-600">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam
+                nesciunt obcaecati tenetur corporis officiis dolore, illum autem
+                optio quas aliquid illo ducimus nam! Expedita iste in amet
+                similique error eveniet.Lorem ipsum dolor sit amet consectetur
+                adipisicing elit.
+                </p>
+            </div>
+
+            <div class="item bg-gray-50 p-6">
+                <h4 class="text-xl md:text-2xl font-bold mb-3">Our Values</h4>
+                <p class="text-sm md:text-base text-gray-600">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
+                autem corporis nemo porro ex quod soluta ipsam, aspernatur veniam
+                vitae minus voluptates! Modi pariatur earum animi voluptate hic
+                nam quia.Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+            </div>
+            </div>
+        </div>
+
+        <div class="w-full lg:w-1/2 p-2 lg:p-4">
+            <div class="relative">
+            <img
+                src="https://html.vikinglab.agency/otech/assets/img/about/vl-video-img.png"
+                alt="about"
+                class="w-full h-auto object-cover brightness-50 rounded-xl"
+            />
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+            >
+                <a
+                href="https://www.youtube.com/watch?v=lCxcTsOHrjo"
+                target="_blank"
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 cursor-pointer"
+                >
+                <div
+                    class="w-20 h-20 md:w-28 md:h-28 rounded-full flex items-center justify-center animate-pulse"
+                    style="background: rgba(94, 37, 216, 0.25)"
+                >
+                    <div
+                    class="w-14 h-14 md:w-20 md:h-20 bg-icon rounded-full flex items-center justify-center"
+                    >
+                    <i
+                        class="fa-solid fa-play text-white text-xl md:text-3xl"
+                    ></i>
+                    </div>
+                </div>
+                </a>
+            </div>
+            </div>
+        </div>
+        </div>
+
+         <section class="pt-20 pb-[140px] relative bg-[#f4f5f8] font-['Figtree']">
+    <div class="max-w-[1280px] w-full mx-auto px-6 relative">
+ 
+      <!-- Heading -->
+      <div class="mb-20">
+        <div class="w-full">
+          <span
+            class="inline-block mb-3 px-3 py-2 uppercase font-bold bg-[#ede9fe] text-[#5046e5] rounded-[30px] text-[1rem] tracking-[0.5px]">
+            Why Choose Us
+          </span>
+ 
+          <h2 class="font-bold text-[#111111] mb-0 text-[2.5rem] leading-[1.3] tracking-[-0.5px]">
+            We Don't Just Deliver Solutions <br>
+            We Build Partnerships
+          </h2>
+        </div>
+      </div>
+ 
+      <!-- Content -->
+      <div class="flex flex-col lg:flex-row items-start justify-between">
+ 
+        <!-- Images -->
+        <div class="w-full lg:w-[66.666667%] lg:pr-4 mb-4 lg:mb-0">
+          <div class="flex gap-6 items-start w-full">
+ 
+            <img src="assets/vl-about-choose-1.webp" alt="Workspace Team"
+              class="w-[60%] h-[550px] object-cover rounded-lg lg:h-[550px] max-lg:h-[380px]">
+ 
+            <img src="assets/vl-about-choose-2.webp" alt="Mobile Analysis"
+              class="w-[40%] h-[340px] object-cover rounded-lg lg:h-[340px] max-lg:h-[260px]">
+          </div>
+        </div>
+ 
+        <!-- Right Content -->
+        <div class="w-full lg:w-[33.333333%] lg:pl-4">
+          <div class="max-w-[400px] mb-[120px] lg:mb-[120px] max-lg:max-w-full max-lg:mb-0">
+ 
+            <p class="mb-4 leading-[28px] text-[18px] text-[#5f6168]">
+              We understand that every business is unique,<br>
+              is why we offer customized IT solutions that<br>
+              fit your needs perfectly. Our approach rooted <br>
+              in collaboration and innovation, ensuring you <br>
+              receive the best tools and strategies.
+            </p>
+ 
+            <a href="#"
+              class="inline-flex items-center gap-2 text-white font-bold px-4 py-[10px] rounded-full text-[1rem] tracking-[0.5px] bg-[#5046e5] shadow-[0_4px_14px_rgba(80,70,229,0.25)]">
+ 
+              LEARN MORE
+ 
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                  d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z" />
+              </svg>
+            </a>
+ 
+          </div>
+        </div>
+ 
+      </div>
+ 
+      <div class="absolute bottom-[87px] left-[36.5%] w-[63.5%] bg-white shadow-[0_15px_45px_rgba(0,0,0,0.05)] rounded-xl z-10
+            max-lg:relative max-lg:left-0 max-lg:w-full max-lg:mt-10 max-lg:bottom-0">
+ 
+        <div class="grid grid-cols-2 md:grid-cols-4 text-center py-6">
+ 
+          <div class="border-r border-gray-200">
+            <div class="text-[2.5rem] font-bold text-[#111111] leading-[1.1]">
+              <span class="counter" data-target="90">0</span>k
+            </div>
+            <div class="text-[0.85rem] text-[#666666] font-medium mt-1">
+              Happy Client
+            </div>
+          </div>
+ 
+          <div class="border-r border-gray-200">
+            <div class="text-[2.5rem] font-bold text-[#111111] leading-[1.1]">
+              <span class="counter" data-target="650">0</span>+
+            </div>
+            <div class="text-[0.85rem] text-[#666666] font-medium mt-1">
+              Total Projects
+            </div>
+          </div>
+ 
+          <div class="border-r border-gray-200 md:border-r">
+            <div class="text-[2.5rem] font-bold text-[#111111] leading-[1.1]">
+              <span class="counter" data-target="85">0</span>+
+            </div>
+            <div class="text-[0.85rem] text-[#666666] font-medium mt-1">
+              Work Together
+            </div>
+          </div>
+ 
+          <div>
+            <div class="text-[2.5rem] font-bold text-[#111111] leading-[1.1]">
+              <span class="counter" data-target="12">0</span>+
+            </div>
+            <div class="text-[0.85rem] text-[#666666] font-medium mt-1">
+              Year of Experience
+            </div>
+          </div>
+ 
+        </div>
+      </div>
+ 
+    </div>
+  </section>
+ 
+
+        <section class="relative z-10 pt-[100px] pb-[70px]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+            <div class="text-center mb-[60px]">
+                <h4 class="text-sm font-semibold tracking-wider text-[#543dca] uppercase rounded-3xl bg-[#f5f3fb] inline-block p-2">
+                    work process
+                </h4>
+                <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 pt-4">
+                    How We Get Things Done
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            
+            <div class="flex flex-col items-center text-center mb-7 group">
+                <div class="relative flex items-center justify-center w-24 h-24 bg-white rounded-full shadow-md transition-all duration-700 ease-in-out group-hover:scale-105 group-hover:bg-[#543dca] group-hover:rotate-[360deg]">
+                <span>
+                    <img src="images/vl-work-3.1.svg" alt="Discovery & Planning Icon" class="w-12 h-12 object-contain transition-all duration-300 group-hover:brightness-0 group-hover:invert" />
+                </span>
+                <div class="absolute -top-1 -right-1 w-7 h-7 bg-black rounded-full flex items-center justify-center shadow-sm transition-colors duration-300 group-hover:bg-white">
+                    <cite class="not-italic text-xs font-bold text-white transition-colors duration-300 group-hover:text-[#543dca]">01</cite>
+                </div>
+                
+                <div class="hidden md:flex absolute top-1/2 left-[105%] -translate-y-1/2 w-full max-w-[42px] items-center justify-center z-20 pointer-events-none" aria-hidden="true">
+                    <img src="images/arrow-right.svg" alt="" class="w-full h-auto object-contain transition-all duration-300 group-hover:filter-purple" />
+                </div>
+                </div>
+                
+                <div class="pt-8">
+                <h3 class="text-xl font-semibold text-slate-900 pb-4">
+                    <a href="#" class="transition-colors duration-200 group-hover:text-[#543dca]">Discovery & Planning</a>
+                </h3>
+                <p class="text-slate-600 text-base leading-relaxed max-w-[240px] mx-auto">
+                    We begin by understanding your business needs, challenges, & goals through in-depth.
+                </p>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center text-center mb-7 group">
+                <div class="relative flex items-center justify-center w-24 h-24 bg-white rounded-full shadow-md transition-all duration-700 ease-in-out group-hover:scale-105 group-hover:bg-[#543dca] group-hover:rotate-[360deg]">
+                <span>
+                    <img src="images/vl-work-3.2.svg" alt="Design & Development Icon" class="w-12 h-12 object-contain transition-all duration-300 group-hover:brightness-0 group-hover:invert" />
+                </span>
+                
+                <div class="absolute -top-1 -right-1 w-7 h-7 bg-black rounded-full flex items-center justify-center shadow-sm transition-colors duration-300 group-hover:bg-white">
+                    <cite class="not-italic text-xs font-bold text-white transition-colors duration-300 group-hover:text-[#543dca]">02</cite>
+                </div>
+                
+                <div class="hidden lg:flex absolute top-1/2 left-[105%] -translate-y-1/2 w-full max-w-[42px] items-center justify-center z-20 pointer-events-none" aria-hidden="true">
+                    <img src="images/arrow-right.svg" alt="" class="w-full h-auto object-contain transition-all duration-300 group-hover:filter-purple" />
+                </div>
+                </div>
+                
+                <div class="pt-8">
+                <h3 class="text-xl font-semibold text-slate-900 pb-4">
+                    <a href="#" class="transition-colors duration-200 group-hover:text-[#543dca]">Design & Development</a>
+                </h3>
+                <p class="text-slate-600 text-base leading-relaxed max-w-[240px] mx-auto">
+                    With a clear plan in place, our experts move into the design and development phase.
+                </p>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center text-center mb-7 group">
+                <div class="relative flex items-center justify-center w-24 h-24 bg-white rounded-full shadow-md transition-all duration-700 ease-in-out group-hover:scale-105 group-hover:bg-[#543dca] group-hover:rotate-[360deg]">
+                <span>
+                    <img src="images/vl-work-3.3.svg" alt="Continuous Improvement Icon" class="w-12 h-12 object-contain transition-all duration-300 group-hover:brightness-0 group-hover:invert" />
+                </span>
+                
+                <div class="absolute -top-1 -right-1 w-7 h-7 bg-black rounded-full flex items-center justify-center shadow-sm transition-colors duration-300 group-hover:bg-white">
+                    <cite class="not-italic text-xs font-bold text-white transition-colors duration-300 group-hover:text-[#543dca]">03</cite>
+                </div>
+                
+                <div class="hidden md:flex absolute top-1/2 left-[105%] -translate-y-1/2 w-full max-w-[42px] items-center justify-center z-20 pointer-events-none" aria-hidden="true">
+                    <img src="images/arrow-right.svg" alt="" class="w-full h-auto object-contain transition-all duration-300 group-hover:filter-purple" />
+                </div>
+                </div>
+                
+                <div class="pt-8">
+                <h3 class="text-xl font-semibold text-slate-900 pb-4">
+                    <a href="#" class="transition-colors duration-200 group-hover:text-[#543dca]">Continuous Improvement</a>
+                </h3>
+                <p class="text-slate-600 text-base leading-relaxed max-w-[240px] mx-auto">
+                    In a fast-changing digital world, staying ahead is essential. That’s why we continuously monitor.
+                </p>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-center text-center mb-7 group">
+                <div class="relative flex items-center justify-center w-24 h-24 bg-white rounded-full shadow-md transition-all duration-700 ease-in-out group-hover:scale-105 group-hover:bg-[#543dca] group-hover:rotate-[360deg]">
+                <span>
+                    <img src="images/vl-work-3.4.svg" alt="Launch & Support Icon" class="w-12 h-12 object-contain transition-all duration-300 group-hover:brightness-0 group-hover:invert" />
+                </span>
+                
+                <div class="absolute -top-1 -right-1 w-7 h-7 bg-black rounded-full flex items-center justify-center shadow-sm transition-colors duration-300 group-hover:bg-white">
+                    <cite class="not-italic text-xs font-bold text-white transition-colors duration-300 group-hover:text-[#543dca]">04</cite>
+                </div>
+                </div>
+
+                <div class="pt-8">
+                <h3 class="text-xl font-semibold text-slate-900 pb-4">
+                    <a href="#" class="transition-colors duration-200 group-hover:text-[#543dca]">Launch & Support</a>
+                </h3>
+                <p class="text-slate-600 text-base leading-relaxed max-w-[240px] mx-auto">
+                    Once everything is in place, we the solution with comprehensive support but our work doesn’t.
+                </p>
+                </div>
+            </div>
+
+            </div>
+        </div>
+        </section>
+        <section class="bg-gradient-to-r from-blue-900 to-indigo-950 pt-[60px] pb-[30px] overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-8 lg:gap-4">
+            
+            <div class="w-full lg:w-1/6 shrink-0 text-center lg:text-left">
+                <h4 class="text-xl font-bold text-white leading-tight">
+                Trusted by <br class="hidden lg:inline" /> Top Companies
+                </h4>
+            </div>
+
+            <div class="w-full lg:w-5/6 overflow-hidden relative">
+                
+                <div class="flex flex-nowrap w-[200%] gap-16 items-center animate-[marquee_25s_linear_infinite]">
+                
+                    <div class="flex justify-around items-center w-1/2 shrink-0 gap-8">
+                        <div class="w-[140px] shrink-0 opacity-70 hover:opacity-100 transition-opacity duration-300"><img src="images/vl-brand-1.1.webp" alt="" class="max-h-12 w-auto mx-auto object-contain" /></div>
+                        <div class="w-[140px] shrink-0 opacity-70 hover:opacity-100 transition-opacity duration-300"><img src="images/vl-brand-1.2.webp" alt="" class="max-h-12 w-auto mx-auto object-contain" /></div>
+                        <div class="w-[140px] shrink-0 opacity-70 hover:opacity-100 transition-opacity duration-300"><img src="images/vl-brand-1.3.webp" alt="" class="max-h-12 w-auto mx-auto object-contain" /></div>
+                        <div class="w-[140px] shrink-0 opacity-70 hover:opacity-100 transition-opacity duration-300"><img src="images/vl-brand-1.4.webp" alt="" class="max-h-12 w-auto mx-auto object-contain" /></div>
+                        <div class="w-[140px] shrink-0 opacity-70 hover:opacity-100 transition-opacity duration-300"><img src="images/vl-brand-1.5.webp" alt="" class="max-h-12 w-auto mx-auto object-contain" /></div>
+                    </div>
+
+                    <div class="flex justify-around items-center w-1/2 shrink-0 gap-8" aria-hidden="true">
+                        <div class="w-[140px] shrink-0 opacity-70 hover:opacity-100 transition-opacity duration-300"><img src="images/vl-brand-1.1.webp" alt="" class="max-h-12 w-auto mx-auto object-contain" /></div>
+                        <div class="w-[140px] shrink-0 opacity-70 hover:opacity-100 transition-opacity duration-300"><img src="images/vl-brand-1.2.webp" alt="" class="max-h-12 w-auto mx-auto object-contain" /></div>
+                        <div class="w-[140px] shrink-0 opacity-70 hover:opacity-100 transition-opacity duration-300"><img src="images/vl-brand-1.3.webp" alt="" class="max-h-12 w-auto mx-auto object-contain" /></div>
+                        <div class="w-[140px] shrink-0 opacity-70 hover:opacity-100 transition-opacity duration-300"><img src="images/vl-brand-1.4.webp" alt="" class="max-h-12 w-auto mx-auto object-contain" /></div>
+                        <div class="w-[140px] shrink-0 opacity-70 hover:opacity-100 transition-opacity duration-300"><img src="images/vl-brand-1.5.webp" alt="" class="max-h-12 w-auto mx-auto object-contain" /></div>
+                    </div>
+
+                </div>
+            </div>
+
+            </div>
+        </div>
+        </section>
+
+        <section id="team">
+            <div id="team-header">
+                    <h4 class="serv-h4">OUR TEAM</h4>
+                    <h3 class="serv-h3">Dedicated Professionals, <br> Proven Results</h3>
+            </div>
+            <div class="owl-carousel team-carousel">
+                <div class="team-card">
+                    <img src="images/vl-team-4.1.webp" alt="">
+                    <button id="team-btn">Patricia Wilkinson</button>
+                    <span>CEO & Founder</span>
+                </div>
+                <div class="team-card">
+                    <img src="images/vl-team-4.2.webp" alt="">
+                    <button id="team-btn">Jack Williamson</button>
+                    <span>Digital Marketer</span>
+                </div>
+                <div class="team-card">
+                    <img src="images/vl-team-4.3.webp" alt="">
+                    <button id="team-btn">Denis Jacobson</button>
+                    <span>Network Engineer</span>
+                </div>
+                <div class="team-card">
+                    <img src="images/vl-team-4.4.webp" alt="">
+                    <button id="team-btn">Kednra Cremin</button>
+                    <span>Network Engineer</span>
+                </div>
+                <div class="team-card">
+                    <img src="images/vl-team-4.1.webp" alt="">
+                    <button id="team-btn">Patricia Wilkinson</button>
+                    <span>Digital Marketer</span>
+                </div>
+                <div class="team-card">
+                    <img src="images/vl-team-4.2.webp" alt="">
+                    <button id="team-btn">Jack Williamson</button>
+                    <span>CEO & Founder</span>
+                </div>
+                <div class="team-card">
+                    <img src="images/vl-team-4.3.webp" alt="">
+                    <button id="team-btn">Denis Jacobson</button>
+                    <span>Network Engineer</span>
+                </div>
+                <div class="team-card">
+                    <img src="images/vl-team-4.4.webp" alt="">
+                    <button id="team-btn">Kednra Cremin</button>
+                    <span>Network Engineer</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="w-full relative">
+        <div class="text-center mb-12">
+            <span
+                class="inline-block bg-indigo-50 text-indigo-600 text-xs font-semibold tracking-wider uppercase px-4 py-1.5 rounded-full mb-3">
+                Testimonial
+            </span>
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-900">
+                What Our Clients Say?
+            </h2>
+        </div>
+
+        <div class="relative carousel-wrapper">
+            <div class="owl-carousel owl-theme three-cards">
+
+                <div
+                    class="item bg-[#F4F5F9] p-6 rounded-lg w-[85vw] md:w-[856px] min-h-[280px] border border-gray-100 flex flex-col sm:flex-row gap-4 items-center sm:items-start text-left">
+                    <img src="images/tailwind-img.webp" alt="Donna Kiehn"
+                        class="w-24 h-32 md:w-28 min-h-[220px] mt-[20px] md:h-36 object-cover rounded-lg shadow-sm !w-auto shrink-0">
+                    <div class="flex-1 flex flex-col justify-between h-full">
+                        <div>
+                            <div class="flex ml-7 text-amber-400 text-xl mb-3 mt-[10px]">
+                                &#9733; &#9733; &#9733; &#9733; &#9733;
+                            </div>
+                            <p class="text-gray-600 ml-7 text-xs md:text-[20px] leading-relaxed mb-4 font-normal">
+                                “Our clients words speak volumes about impact of our services. We take pride in building
+                                strong best partnerships and delivering solutions that exceed expectations from seamless
+                                cloud migrations.”
+                            </p>
+                        </div>
+                        <div class="flex justify-between items-end mt-[10px]">
+                            <div>
+                                <h4 class="font-bold ml-7 text-gray-900 text-lg">Donna Kiehn</h4>
+                                <p class="text-md ml-7 text-gray-500">Businessman</p>
+                            </div>
+                            <div class="flex items-center space-x-0.5 font-semibold tracking-tight text-sm">
+                                <img src="images/google.webp" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="item bg-[#F4F5F9] p-6 rounded-lg w-[85vw] md:w-[856px] min-h-[280px] border border-gray-100 flex flex-col sm:flex-row gap-4 items-center sm:items-start text-left">
+                    <img src="images/tailwind-img.webp" alt="Donna Kiehn"
+                        class="w-24 h-32 md:w-28 min-h-[220px] mt-[20px] md:h-36 object-cover rounded-lg shadow-sm !w-auto shrink-0">
+                    <div class="flex-1 flex flex-col justify-between h-full">
+                        <div>
+                            <div class="flex ml-7 text-amber-400 text-xl mb-3 mt-[10px]">
+                                &#9733; &#9733; &#9733; &#9733; &#9733;
+                            </div>
+                            <p class="text-gray-600 ml-7 text-xs md:text-[20px] leading-relaxed mb-4 font-normal">
+                                “Our clients words speak volumes about impact of our services. We take pride in building
+                                strong best partnerships and delivering solutions that exceed expectations from seamless
+                                cloud migrations.”
+                            </p>
+                        </div>
+                        <div class="flex justify-between items-end mt-[10px]">
+                            <div>
+                                <h4 class="font-bold ml-7 text-gray-900 text-lg">Donna Kiehn</h4>
+                                <p class="text-md ml-7 text-gray-500">Businessman</p>
+                            </div>
+                            <div class="flex items-center space-x-0.5 font-semibold tracking-tight text-sm">
+                                <img src="images/google.webp" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="item bg-[#F4F5F9] p-6 rounded-lg w-[85vw] md:w-[856px] min-h-[280px] border border-gray-100 flex flex-col sm:flex-row gap-4 items-center sm:items-start text-left">
+                    <img src="images/tailwind-img.webp" alt="Donna Kiehn"
+                        class="w-24 h-32 md:w-28 min-h-[220px] mt-[20px] md:h-36 object-cover rounded-lg shadow-sm !w-auto shrink-0">
+                    <div class="flex-1 flex flex-col justify-between h-full">
+                        <div>
+                            <div class="flex ml-7 text-amber-400 text-xl mb-3 mt-[10px]">
+                                &#9733; &#9733; &#9733; &#9733; &#9733;
+                            </div>
+                            <p class="text-gray-600 ml-7 text-xs md:text-[20px] leading-relaxed mb-4 font-normal">
+                                “Our clients words speak volumes about impact of our services. We take pride in building
+                                strong best partnerships and delivering solutions that exceed expectations from seamless
+                                cloud migrations.”
+                            </p>
+                        </div>
+                        <div class="flex justify-between items-end mt-[10px]">
+                            <div>
+                                <h4 class="font-bold ml-7 text-gray-900 text-lg">Donna Kiehn</h4>
+                                <p class="text-md ml-7 text-gray-500">Businessman</p>
+                            </div>
+                            <div class="flex items-center space-x-0.5 font-semibold tracking-tight text-sm">
+                                <img src="images/google.webp" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="item bg-[#F4F5F9] p-6 rounded-lg w-[85vw] md:w-[856px] min-h-[280px] border border-gray-100 flex flex-col sm:flex-row gap-4 items-center sm:items-start text-left">
+                    <img src="images/tailwind-img.webp" alt="Donna Kiehn"
+                        class="w-24 h-32 md:w-28 min-h-[220px] mt-[20px] md:h-36 object-cover rounded-lg shadow-sm !w-auto shrink-0">
+                    <div class="flex-1 flex flex-col justify-between h-full">
+                        <div>
+                            <div class="flex ml-7 text-amber-400 text-xl mb-3 mt-[10px]">
+                                &#9733; &#9733; &#9733; &#9733; &#9733;
+                            </div>
+                            <p class="text-gray-600 ml-7 text-xs md:text-[20px] leading-relaxed mb-4 font-normal">
+                                “Our clients words speak volumes about impact of our services. We take pride in building
+                                strong best partnerships and delivering solutions that exceed expectations from seamless
+                                cloud migrations.”
+                            </p>
+                        </div>
+                        <div class="flex justify-between items-end mt-[10px]">
+                            <div>
+                                <h4 class="font-bold ml-7 text-gray-900 text-lg">Donna Kiehn</h4>
+                                <p class="text-md ml-7 text-gray-500">Businessman</p>
+                            </div>
+                            <div class="flex items-center space-x-0.5 font-semibold tracking-tight text-sm">
+                                <img src="images/google.webp" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        </section>
+
+        <section class="last-section">
+
+  <div class="footer-cta-banner-left">
+    <div class="cta-text">
+      <h2>Transform Your Business <br> Contact Us Today</h2>
+    </div>
+    <div class="cta-form">
+      <input type="email" name="email" id="" placeholder="Email Address">
+      <div class="subscribeBtn">
+      <button type="submit" class="contact hero-btn subscribe"
+          >SUBSCRIBE NOW
+          <span><i class="fa-solid fa-arrow-right"></i></span
+        ></button></div>
+    </div>
+  </div>
+
+  <div class="footer-cta-banner-right">
+    <div class="shapes">
+      <div class="shape3 sh">
+      <img src="./assets/emoji-4.3.svg">
+      </div>
+    </div>
+    
+    <img src="./assets/black-person-i,g.webp" alt="" srcset="">
+    </div>
+    </section>
+    </main>
+
+        <footer class="site-footer">
+        
+        <div class="footer-col brand-col">
+        <div class="footer-logo">
+        <img src="./assets/vl-logo-1.webp" alt="" srcset="">
+        </div>
+        <p>We foster a culture of teamwork &
+        creative problem-solving to deliver
+        exceptional results for our clients.</p>
+        <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        </div>
+        </div>
+        <div class="footer-col links-col">
+        <h3>Quick Links</h3>
+        <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Our Service</a></li>
+        <li><a href="#">Case Study</a></li>
+        <li><a href="#">Testimonial</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-col links-col">
+        <h3>Our Service</h3>
+        <ul>
+        <li><a href="#">Cyber Security</a></li>
+        <li><a href="#">Network Analysis</a></li>
+        <li><a href="#">Data Recovery</a></li>
+        <li><a href="#">It Service</a></li>
+        </ul>
+    </div>
+
+    <div class="footer-col insta-col">
+        <h3>Instagram Post</h3>
+        <div class="insta-grid">
+        <div class="insta-item"><img src="./assets/ins-1.webp" alt="Post 1"></div>
+        <div class="insta-item"><img src="./assets/ins-2.webp" alt="Post 2"></div>
+        <div class="insta-item"><img src="./assets/ins-3.webp" alt="Post 3"></div>
+        <div class="insta-item"><img src="./assets/ins-4.webp" alt="Post 4"></div>
+        <div class="insta-item"><img src="./assets/ins-5.webp" alt="Post 5"></div>
+        <div class="insta-item"><img src="./assets/ins-6.webp" alt="Post 6"></div>
+        </div>
+    </div>
+    </footer>
+
+
+    <footer class="bottom-footer">
+    <div class="bottom-footer-container">
+        <p>Copyright ©2024 O-Tech. All Rights Reserved</p>
+        <span>Terms & Conditions  |  Privacy Policy</span>
+    </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function () {
+        $('.about-carousel').owlCarousel({
+        loop:false,
+        margin:10,
+        nav:true,
+        dots:false,
+        navText: [
+    `<div class="w-12 h-12 border border-gray-300 rounded-xl flex items-center justify-center">
+        <i class="fa-solid fa-arrow-left text-xl"></i>
+    </div>`,
+
+    `<div class="w-12 h-12 border border-gray-300 rounded-xl flex items-center justify-center">
+        <i class="fa-solid fa-arrow-right text-xl"></i>
+    </div>`
+        ],
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:1
+            },
+            1025:{
+                items:1
+            }
+        }
+    })
+    });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const counters = document.querySelectorAll('.counter');
+            const duration = 1000;
+
+            counters.forEach(counter => {
+                const animate = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const startTime = performance.now();
+
+                    const updateCounter = (currentTime) => {
+                        const elapsedTime = currentTime - startTime;
+                        const progress = Math.min(elapsedTime / duration, 1);
+                        
+                        const easeOutQuad = progress * (2 - progress);
+                        const currentValue = Math.floor(easeOutQuad * target);
+
+                        counter.innerText = currentValue;
+
+                        if (progress < 1) {
+                            requestAnimationFrame(updateCounter);
+                        } else {
+                            counter.innerText = target;
+                        }
+                    };
+
+                    requestAnimationFrame(updateCounter);
+                };
+
+                animate();
+            });
+        });
+    </script>
+    <script>
+        $('.team-carousel').owlCarousel({
+            loop:false,
+            margin:20,
+            nav:true,
+            dots:false,
+            responsive:{
+                0:{ items:1 },
+                768:{ items:2 },
+                1200:{ items:4 }
+            }
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            var owl = $('.three-cards');
+
+            owl.owlCarousel({
+                center: true,
+                autoWidth: true,
+                loop: false,
+                margin: 24,
+                autoplay: true,
+                autoplayTimeout: 2000,
+                autoplayHoverPause: true,
+                nav: false,
+                dots: true
+            });
+
+            $('#customNextBtn').click(function () {
+                owl.trigger('next.owl.carousel');
+            });
+        });
+    </script>
+  </body>
+</html>

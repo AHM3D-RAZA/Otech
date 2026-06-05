@@ -4,6 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,17 +34,17 @@
             <div class="navbar">
                 <nav>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Pages</a></li>
-                        <li><a href="#">Case Studies</a></li>
-                        <li><a href="#">Blog</a></li>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./aboutus/about.html">About Us</a></li>
+                        <li><a href="./services/services.html">Services</a></li>
+                        <li><a href="./index.html">Pages</a></li>
+                        <li><a href="./index.html">Case Studies</a></li>
+                        <li><a href="./index.html">Blog</a></li>
                     </ul>
                 </nav>
             </div>
-            <div>
-                <button class="btn">GET STARTED</button>
+            <div id="get-started-div">
+                <button class="btn"><a href="./contact.html">GET STARTED</a></button>
             </div>
         </div>
     </header>
@@ -42,7 +55,8 @@
                 <h1>IT Solutions For A Digital-First World</h1>
                 <p class="hero-para">Empower your business with cutting technology solutions
 tailored to meet your unique needs from cloud computing.</p>
-                <button class="btn-m">BOOK A FREE CONSULTATION</button>
+                <button class="btn-m">BOOK A FREE CONSULTATION <i class="hero-arrow bi bi-arrow-up-right" style="font-size: 1
+                rem;"></i></button>
                 <div id="numbers">
                     <div class="numbers-stat">
                         <span>90k</span>
@@ -86,7 +100,7 @@ tailored to meet your unique needs from cloud computing.</p>
                         <img src="images/vl-about-top-sm-4.2.webp" alt="">
                     </div>
                     <div id="sub-img-right">
-                        <img src="images/vl-about-top-sm-4.2.webp" alt="">
+                        <img src="images/vl-about-poliogon.svg" alt="">
                         <span>12+ <br> Year experience</span>
                     </div>
                 </div>
@@ -221,17 +235,29 @@ services we develop networks that.</p>
                         <div class="tst-card">
                             <div style="display:flex; gap: 5px;"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
                             <p>"Otech transformed our IT infrastructure, boosting efficiency and security. Their expertise is unmatched!"</p>
-                            <span>- John Doe, CEO of Tech Innovators</span>
+                            <div class="tst-card-pic">
+                                <img class="pfp" src="./images/vl-testimonial-1.1.webp" alt="">
+                                <span>- John Doe, CEO of Tech Innovators</span>
+                                <img class="quotes" src="./images/vl-testimonial-q2.svg" alt="">
+                            </div>
                         </div>
                         <div class="tst-card">
                             <div style="display:flex; gap: 5px;"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
                             <p>"The team at Otech provided exceptional support and innovative solutions that helped our business thrive."</p>
-                            <span>- Jane Smith, CTO of Future Solutions</span>
+                            <div class="tst-card-pic">
+                                <img class="pfp" src="./images/vl-testimonial-1.2.webp" alt="">
+                                <span>- Jane Smith, CTO of Future Solutions</span>
+                                <img class="quotes" src="./images/vl-testimonial-q2.svg" alt="">
+                            </div>
                         </div>
                         <div class="tst-card">
                             <div style="display:flex; gap: 5px;"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
                             <p>"Otech's managed IT services allowed us to focus on our core business while they handled all our IT needs."</p>
-                            <span>- Mark Johnson, COO of Global Enterprises</span>
+                            <div class="tst-card-pic">
+                                <img class="pfp" src="./images/vl-testimonial-1.1.webp" alt="">
+                                <span>- Mark Johnson, COO of Global Enterprises</span>
+                                <img class="quotes" src="./images/vl-testimonial-q2.svg" alt="">
+                            </div>  
                         </div>
                     </div>
                 </div>
@@ -376,12 +402,14 @@ services we develop networks that.</p>
                             <span>10 October 2024</span>
                             <i class="bi bi-person-fill"></i>
                             <span>Shakib Mahmoud</span>
+                            <i class="blog-arrow bi bi-arrow-up-right"></i>
                         </div>
                         <div class="cont">
                             <h4>Your Trusted Partner In Technology Transformation</h4>
                             <p>Looking to stay ahead in the fast-paced world technology?
                                 Our blog offers in-depth articles, case studies, & thought.</p>
-                            <button>Read More</button>
+                            <button>Read More <i class="bi bi-arrow-up-right" style="font-size: 1
+                rem;"></i></button>
                         </div>
                     </div>
                 </div>
@@ -395,20 +423,106 @@ services we develop networks that.</p>
                             <span>10 October 2024</span>
                             <i class="bi bi-person-fill"></i>
                             <span>Shakib Mahmoud</span>
+                            <i class="blog-arrow bi bi-arrow-up-right"></i>
                         </div>
                         <div class="cont">
                             <h4>Your Trusted Partner In Technology Transformation</h4>
                             <p>Looking to stay ahead in the fast-paced world technology?
                                 Our blog offers in-depth articles, case studies, & thought.</p>
-                            <button>Read More</button>
+                            <button>Read More <i class="bi bi-arrow-up-right" style="font-size: 1
+                rem;"></i></button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-    </main>
-    
-    <footer></footer>
+
+        <section class="last-section">
+
+        <div class="footer-cta-banner-left">
+            <div class="cta-text">
+            <h2>Transform Your Business <br> Contact Us Today</h2>
+            </div>
+            <div class="cta-form">
+            <input type="email" name="email" id="" placeholder="Email Address">
+            <div class="subscribeBtn">
+            <button type="submit" class="contact hero-btn subscribe"
+                >SUBSCRIBE NOW
+                <span><i class="fa-solid fa-arrow-right"></i></span
+                ></button></div>
+            </div>
+        </div>
+
+        <div class="footer-cta-banner-right">
+            <div class="shapes">
+            <div class="shape3 sh">
+            <img src="./assets/emoji-4.3.svg">
+            </div>
+            </div>
+            
+            <img src="./assets/black-person-i,g.webp" alt="" srcset="">
+            </div>
+            
+        </section>
+
+        <footer class="site-footer">
+            
+            <div class="footer-col brand-col">
+            <div class="footer-logo">
+            <img src="./assets/vl-logo-1.webp" alt="" srcset="">
+            </div>
+            <p>We foster a culture of teamwork &
+            creative problem-solving to deliver
+            exceptional results for our clients.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+            </div>
+            <div class="footer-col links-col">
+            <h3>Quick Links</h3>
+            <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Our Service</a></li>
+            <li><a href="#">Case Study</a></li>
+            <li><a href="#">Testimonial</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col links-col">
+            <h3>Our Service</h3>
+            <ul>
+            <li><a href="#">Cyber Security</a></li>
+            <li><a href="#">Network Analysis</a></li>
+            <li><a href="#">Data Recovery</a></li>
+            <li><a href="#">It Service</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-col insta-col">
+            <h3>Instagram Post</h3>
+            <div class="insta-grid">
+            <div class="insta-item"><img src="./assets/ins-1.webp" alt="Post 1"></div>
+            <div class="insta-item"><img src="./assets/ins-2.webp" alt="Post 2"></div>
+            <div class="insta-item"><img src="./assets/ins-3.webp" alt="Post 3"></div>
+            <div class="insta-item"><img src="./assets/ins-4.webp" alt="Post 4"></div>
+            <div class="insta-item"><img src="./assets/ins-5.webp" alt="Post 5"></div>
+            <div class="insta-item"><img src="./assets/ins-6.webp" alt="Post 6"></div>
+            </div>
+        </div>
+        </footer>
+        <footer class="bottom-footer">
+        <div class="bottom-footer-container">
+            <p>Copyright ©2024 O-Tech. All Rights Reserved</p>
+            <span>Terms & Conditions  |  Privacy Policy</span>
+        </div>
+        </footer>
+        
+        </main>
+        
+        <footer></footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>

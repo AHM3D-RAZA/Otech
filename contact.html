@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Otech</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="output.css" />
+  <style type="text/tailwindcss">
+      @theme {
+        --color-icon: rgb(94, 37, 216);
+      }
+    </style>
+
+    <style>        
+body{
+      font-family: "Figtree", sans-serif;  
+      /* YE beshak na copy kren */
+}
+
+.last-section {    
+    display: flex;
+    flex-wrap: wrap;
+    background: linear-gradient(90deg, #2E0797 0%, #726EFC 100%);    
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: space-between;
+    border-radius: 24px;
+    padding: 3rem 3rem 0 3rem; 
+    position: relative;
+    z-index: 10;
+    margin-bottom: -150px; 
+    margin-top: 100px;
+    box-sizing: border-box;
+    overflow: hidden; /* Elements ko boundary se bahar nikalne se rokega */
+}
+
+.banner-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-bottom: 3rem;
+    flex: 1;
+    min-width: 280px;
+}
+
+.cta-text > h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    line-height: 3.5rem;
+    padding-bottom: 2rem;
+    color: white;
+    margin: 0;
+}
+
+.cta-form {
+    position: relative;
+    z-index: 1;
+    max-width: 480px;
+    width: 100%;
+}
+
+.cta-form input {
+    padding: 1rem 11rem 1rem 1.5rem; /* Padding balanced for internal button */
+    height: 4rem;
+    width: 100%;
+    border-radius: 3rem;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.subscribeBtn {
+    position: absolute;
+    top: 50%;
+    right: 6px; 
+    transform: translateY(-50%); 
+    z-index: 2;
+}
+
+
+/* Ye css sirf subscribe now ki styling keliye he kiunke mere pas ye kyi jga use horha he isliye css lmbi he */
+
+.contact {
+    background-color: white; 
+    color: #2E0797;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1rem;
+    padding: 0.4rem 0.4rem 0.4rem 1.2rem; 
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    position: relative;
+    border-radius: 3rem;
+    overflow: hidden;  
+    z-index: 1;
+    transition: color 0.4s ease;
+}
+
+/* Creates the secret color layer hidden in the center */
+.contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%; /* Hidden by default */
+    height: 100%;
+    background: linear-gradient(90deg, #2E0797 0%, #726EFC 100%);
+    z-index: -1;  /* Sits underneath the button text */
+    transition: width 0.4s ease-in-out;
+}
+
+/* When you hover, grow the width to 100% and turn text white */
+.contact:hover::before {
+    width: 100%;
+}
+
+/* THis ::before allows us to create a small box inside css withoiut using html */
+
+.contact:hover {
+    color: white;
+}
+
+
+.right-nav .contact>span, .contact.hero-btn>span {
+    background: linear-gradient(90deg, rgb(235, 232, 246) 0%, rgb(240, 239, 253) 100%);
+    height: 36px;
+    width: 36px;
+    display: inline-block;
+    line-height: 36px;
+    text-align: center;
+    border-radius: 50px;
+    font-size: 20px;
+    color: #2E0797;
+    transform: rotate(-45deg);
+    margin-left: 6px;
+    transition: 0.4s ease;
+}
+
+/* yhan tk  */
+
+.subscribeBtn button.contact.subscribe {
+    height: calc(4rem - 12px); 
+    margin: 0 !important; 
+    padding: 0 1.5rem; 
+    white-space: nowrap; 
+    display: inline-flex;
+    align-items: center;
+    border-radius: 3rem;
+    border: none;
+    background-color: #2E0797;
+    color: white;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.banner-right {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex: 1;
+    min-width: 280px;
+    position: relative;
+}
+
+.banner-right img {
+    max-height: 320px;
+    width: auto;
+    max-width: 100%;
+    display: block;
+    object-fit: contain;
+}
+
+
+.shape3.sh {
+    position: absolute;
+    right: 35%;
+    top: 20%;
+    z-index: 1;
+    animation: vlbounce 5s linear infinite;
+}
+
+
+@keyframes vlbounce {
+    0% {
+        transform: translateY(-20%);
+    }
+    50% {
+        transform: translateY(20%)
+    }
+    100% {
+        transform: translateY(-20%);
+
+    } 
+
+}
+.site-footer {
+    background-color: #F6F6F9; 
+    width: 100%;
+    padding: 240px 10% 4rem 10%;    
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+    box-sizing: border-box;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.footer-logo img {
+    max-width: 150px;
+    height: auto;
+}
+
+.brand-col p {
+    color: #666;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    margin: 0;
+}
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #fff;
+    color: #2E0797;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.social-icons a:hover {
+    background-color: #2E0797;
+    color: #fff;
+}
+
+.footer-col h3 {
+    color: #000;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.links-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.links-col ul li a {
+    color: rgba(22, 22, 22, 0.7);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.links-col ul li a:hover {
+    color: #726EFC;
+}
+
+.insta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    max-width: 240px;
+}
+
+.insta-item {
+    aspect-ratio: 1 / 1;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #222;
+}
+
+.insta-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ==========================================================================
+   BOTTOM FOOTER
+   ========================================================================== */
+.bottom-footer {
+    background-color: #F6F6F9;
+    border-top: 1px solid #DDDEE1;
+    width: 100%;
+    padding: 24px 0;
+}
+
+.bottom-footer-container {
+    width: 80%; 
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* ==========================================================================
+   MEDIA QUERIES (BREAKPOINT BREAKDOWN FOR RESPONSIVENESS)
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+    .site-footer {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .bottom-footer-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 992px) {
+    .site-footer {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+    .cta-text > h2 {
+        font-size: 2.5rem;
+        line-height: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .last-section {
+        width: 92%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 3rem 1.5rem 0 1.5rem;
+        margin-bottom: -180px; /* Shift handle for tablet stacking */
+    }
+    
+    .banner-left {
+        align-items: center;
+        width: 100%;
+        padding-bottom: 2rem;
+    }
+
+    .cta-text > h2 {
+        font-size: 2.2rem;
+        line-height: 2.8rem;
+        padding-bottom: 1.5rem;
+    }
+
+    .banner-right {
+        width: 100%;
+    }
+
+    .banner-right img {
+        max-height: 280px;
+    }
+
+    .site-footer {
+        grid-template-columns: repeat(2, 1fr);
+        padding-top: 240px; 
+    }
+
+    .bottom-footer-container {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .shape3.sh{
+        display:none;
+    }
+}
+
+@media (max-width: 520px) {
+    .site-footer {
+        /* 2 Columns grid strictly for layout management */
+        grid-template-columns: repeat(2, 1fr); 
+        padding-top: 280px; 
+        gap: 2.5rem 1.5rem;
+    }
+
+    /* Brand content aur Instagram content full row lelein (1 col stack) */
+    .footer-col.brand-col,
+    .footer-col.insta-col {
+        grid-column: span 2;
+    }
+
+    /* Dono Links-col ab half width lekar ek hi row mein side-by-side ayenge */
+    .footer-col.links-col {
+        grid-column: span 1;
+    }
+
+    .last-section {
+        margin-bottom: -240px; 
+    }
+
+    /* Transform relative layout for smaller inputs */
+    .cta-form input {
+        padding: 1rem;
+        border-radius: 12px;
+        text-align: center;
+        height: 3.5rem;
+    }
+    
+    .subscribeBtn {
+        position: static;
+        transform: none;
+        margin-top: 12px;
+        width: 100%;
+    }
+    
+    .subscribeBtn button.contact.subscribe {
+        width: 100%;
+        justify-content: center;
+        border-radius: 12px;
+        height: 3.5rem;
+    }
+
+    .insta-grid {
+        max-width: 100%;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+    </style>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            keyframes: {
+              marquee: {
+                '0%': { transform: 'translateX(0%)' },
+                '100%': { transform: 'translateX(-50%)' }
+              }
+            }
+          }
+        }
+      }
+    </script>
+</head>
+
+<body>
+  <header>
+        <div id="menu-box">
+            <div class="logo">
+                <img src="images/vl-logo-1.1.webp" alt="">
+            </div>
+            <div class="navbar">
+                <nav>
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./aboutus/about.html">About Us</a></li>
+                        <li><a href="./services/services.html">Services</a></li>
+                        <li><a href="./index.html">Pages</a></li>
+                        <li><a href="./index.html">Case Studies</a></li>
+                        <li><a href="./index.html">Blog</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="get-started-div">
+                <button class="btn">GET STARTED</button>
+            </div>
+        </div>
+    </header>
+
+  <main>
+
+    <div class="w-full bg-gradient-to-r from-[#3B1CD4] via-[#4E36E2] to-[#7C3AED] pt-12 pb-0 px-6 md:px-12 mb-10 flex items-center shadow-md relative overflow-hidden min-h-[220px]">
+      <div class="max-w-6xl w-full mx-auto flex flex-row items-center justify-between relative z-10">
+       
+        <!-- Left Column-->
+        <div class="py-6">
+          <h1 class="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-2">
+            Contact Us
+          </h1>
+          <div class="flex items-center gap-2 text-sm text-white/80 font-medium">
+            <a href="../index.html" class="hover:text-white transition duration-200">Home</a>
+            <span class="text-white/50 text-xs font-bold">&gt;</span>
+            <span class="text-white font-semibold"><a href="./contact.html">Contact Us</a></span>
+          </div>
+        </div>
+        <div class="hidden sm:block h-[220px] max-w-[280px] md:max-w-[340px] relative self-end">
+          <img src="https://html.vikinglab.agency/otech/assets/img/banner/vl-breadcrumb-1.png" alt="VR Character Banner Asset" class="h-full w-auto object-contain object-bottom block">
+        </div>
+      </div>
+    </div>
+
+<section class="contact-form-section bg-white py-16 pt-24 pb-20 px-4 md:px-4 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+    
+    <div class="form-container bg-gray-50 p-8 rounded-2xl shadow-sm">
+      <h2 class="text-2xl font-bold text-gray-900 pb-5 m-0">Send us a Message</h2>
+      <p class="text-gray-500 pb-8 text-lg ">Have questions or need assistance? We're here to help! Whether you're exploring solutions, looking for a consultation, or need.</p>
+      
+      <form action="#" method="POST" class="space-y-5">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 ">
+          <input type="text" placeholder="First Name" class="w-full placeholder-slate-800 p-3 border border-gray-200 rounded-lg focus:outline-none focus:border-purple-500" required>
+          <input type="text" placeholder="Last Name" class="w-full p-3 border placeholder-slate-800 border-gray-200 rounded-lg focus:outline-none focus:border-purple-500" required>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 ">
+          <input type="email" placeholder="Email" class="w-full p-3 border placeholder-slate-800 border-gray-200 rounded-lg focus:outline-none focus:border-purple-500" required>
+          <input type="tel" placeholder="Number" class="w-full p-3 border placeholder-slate-800 border-gray-200 rounded-lg focus:outline-none focus:border-purple-500">
+        </div>
+        <div>
+          <input type="text" placeholder="subject" class=" w-full p-3 border placeholder-slate-800 border-gray-200 rounded-lg focus:outline-none focus:border-purple-500" required>
+        </div>  
+
+        <div>
+          <textarea name="message" id="message" placeholder="Message" class=" w-full p-3 border placeholder-slate-800 border-gray-200 rounded-lg focus:outline-none focus:border-purple-500"></textarea>
+          </div> 
+          <div class="w-full flex justify-end pt-2">
+          <button type="submit" class="group relative inline-flex w-max items-center rounded-full bg-[#5038C9] py-2 pl-6 pr-2 text-base font-bold uppercase tracking-wider text-white  justify-between overflow-hidden z-10 transition-colors duration-300
+
+/* 1. Black layer (Hidden by default using scale-x-0) */
+before:absolute before:content-[''] before:inset-0 before:bg-[#111112] before:z-[-1] before:scale-x-0 before:origin-center before:transition-transform before:duration-300
+
+/* 2. Hover state to trigger the black scale layer */
+hover:before:scale-x-100">
+  
+  <span>Send Now</span>
+  
+  <span class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white ml-3 transform -rotate-45 transition-transform duration-300 group-hover:bg-white/20">
+    <i class="fa-solid fa-arrow-right text-sm"></i>
+  </span>
+
+</button>
+</div>
+        </form>
+    </div>
+
+    <div class="info-container flex flex-col items-start justify-center gap-4">
+      <span class="text-xs font-bold uppercase bg-purple-100 text-purple-700 px-3 py-1 rounded-full mb-4">Contact Us</span>
+      <h2 class="text-4xl md:text-5xl text-gray-900 mb-6 leading-tight">Let’s Connect Empower And Your Business</h2>
+      
+      <div class="call-card group flex items-center gap-4 bg-gray-50 p-6 rounded-xl w-full max-w-md border border-gray-100 hover:bg-[#5038C9]">
+        <div class="icon-box bg-white p-3 rounded-full shadow-sm text-white">
+          <img src="./assets/phone.svg" alt="" srcset="">
+        </div>
+        <div>
+          <p class="text-lg text-gray-400 group-hover:text-white/80">Gives us a Call</p>
+          <p class="text-xl font-bold text-gray-900 group-hover:text-white">123-456-7890</p>
+        </div>
+        
+      </div>
+
+      <div class="call-card group flex items-center gap-4 bg-gray-50 p-6 rounded-xl w-full max-w-md border border-gray-100 hover:bg-[#5038C9] ">
+        <div class="icon-box bg-white p-3 rounded-full shadow-sm text-black">
+          <img src="./assets/mail.svg" alt="" srcset="">
+        </div>
+        <div class="">
+          <p class="text-lg text-gray-400 group-hover:text-white/80 ">Send me Mail</p>
+          <p class="text-xl font-bold text-gray-900 group-hover:text-white">OTech It Service.com</p>
+        </div>
+        
+      </div>
+
+      <div class="call-card group flex items-center gap-4 bg-gray-50 p-6 rounded-xl w-full max-w-md border border-gray-100 hover:bg-[#5038C9]">
+        <div class="icon-box bg-white p-3 rounded-full shadow-sm text-white">
+          <img src="./assets/location.svg"  alt="" srcset="">
+        </div>
+        <div>
+          <p class="text-lg text-gray-400 group-hover:text-white/80">Contact us</p>
+          <p class="text-xl font-bold text-gray-900 group-hover:text-white">8708 Technology, USA</p>
+        </div>
+        
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section class="map-section w-full px-4 md:px-8 max-w-7xl mx-auto pb-16">
+    <div class="w-full h-[450px] rounded-2xl overflow-hidden shadow-sm border border-gray-100">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.984288665436!2d67.12553357508293!3d24.93260514236748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33900409f01e5%3A0xa1c23c9afaa54399!2sInformation%20Technology%20Services!5e0!3m2!1sen!2s!4v1780295137657!5m2!1sen!2s" 
+      class="w-full h-full border-0" 
+      allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+
+      </iframe>
+    </div>
+  </section>
+
+
+</main>
+
+
+<section class="last-section">
+
+  <div class="footer-cta-banner-left">
+    <div class="cta-text">
+      <h2>Transform Your Business <br> Contact Us Today</h2>
+    </div>
+    <div class="cta-form">
+      <input type="email" name="email" id="" placeholder="Email Address">
+      <div class="subscribeBtn">
+      <button type="submit" class="contact hero-btn subscribe"
+          >SUBSCRIBE NOW
+          <span><i class="fa-solid fa-arrow-right"></i></span
+        ></button></div>
+    </div>
+  </div>
+
+  <div class="footer-cta-banner-right">
+    <div class="shapes">
+      <div class="shape3 sh">
+      <img src="./assets/emoji-4.3.svg">
+      </div>
+    </div>
+    
+    <img src="./assets/black-person-i,g.webp" alt="" srcset="">
+    </div>
+</section>
+
+  <footer class="site-footer">
+    
+    <div class="footer-col brand-col">
+    <div class="footer-logo">
+      <img src="./assets/vl-logo-1.webp" alt="" srcset="">
+    </div>
+      <p>We foster a culture of teamwork &
+      creative problem-solving to deliver
+      exceptional results for our clients.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="footer-col links-col">
+    <h3>Quick Links</h3>
+    <ul>
+      <li><a href="./about.html">About Us</a></li>
+      <li><a href="./service.html">Our Service</a></li>
+      <li><a href="#">Case Study</a></li>
+      <li><a href="#">Testimonial</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-col links-col">
+    <h3>Our Service</h3>
+    <ul>
+      <li><a href="#">Cyber Security</a></li>
+      <li><a href="#">Network Analysis</a></li>
+      <li><a href="#">Data Recovery</a></li>
+      <li><a href="#">It Service</a></li>
+    </ul>
+  </div>
+
+  <div class="footer-col insta-col">
+    <h3>Instagram Post</h3>
+    <div class="insta-grid">
+      <div class="insta-item"><img src="./assets/ins-1.webp" alt="Post 1"></div>
+      <div class="insta-item"><img src="./assets/ins-2.webp" alt="Post 2"></div>
+      <div class="insta-item"><img src="./assets/ins-3.webp" alt="Post 3"></div>
+      <div class="insta-item"><img src="./assets/ins-4.webp" alt="Post 4"></div>
+      <div class="insta-item"><img src="./assets/ins-5.webp" alt="Post 5"></div>
+      <div class="insta-item"><img src="./assets/ins-6.webp" alt="Post 6"></div>
+    </div>
+  </div>
+</footer>
+
+
+<hr>
+
+<footer class="bottom-footer">
+  <div class="bottom-footer-container">
+    <p>Copyright ©2024 O-Tech. All Rights Reserved</p>
+    <span>Terms & Conditions  |  Privacy Policy</span>
+  </div>
+</footer>
+
+</body>
+
+</html>
