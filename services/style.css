@@ -4,6 +4,16 @@
             box-sizing: border-box;
         }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+main {
+    width: 100%;
+    overflow: hidden;
+}
+
         #menu-box{
             display: flex;
             justify-content: space-around;
